@@ -1,0 +1,179 @@
+@charset 'utf-8';
+@import url(./my_reset.css);
+@font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  /* overflow: hidden; */
+}
+
+.mw {
+  max-width: 1440px;
+  margin: auto;
+  border: 1px solid orange;
+}
+
+header {
+  z-index: 999;
+  position: relative;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+header img {
+  width: 10%;
+}
+
+header .mn {
+  width: 70%;
+  display: flex;
+  border: 1px solid green;
+}
+
+header .mn > li {
+  width: 20%;
+  border: 1px solid blue;
+  text-align: center;
+  position: relative;
+  /* transition: 0.3s; */
+}
+
+header .mn > li > a {
+  color: #144aaa;
+  font-weight: bold;
+  line-height: 4rem;
+  transition: 0.3s;
+}
+
+header .mn > li:hover > a {
+  color: #000000;
+}
+
+header .mn .mnn {
+  position: absolute;
+  visibility: hidden;
+  top: 100%;
+}
+
+header .mn:hover .mnn {
+  visibility: visible;
+  width: 100%;
+  height: 150%;
+}
+
+header .mn::before {
+  content: "";
+  /* border: 5px solid #f0f4ff; */
+  background-color: #f0f4ff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 500%;
+  height: 150%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+header .mn:hover::before {
+  opacity: 1;
+}
+
+.mn .mnn {
+  border: 1px solid firebrick;
+}
+
+/* header .mn:hover > li:nth-of-type(1) li:nth-of-type(1) {
+  width: 10000px;
+  height: 100%;
+  position: absolute;
+  transform: translateX(-50%);
+  background-color: #f0f4ff;
+  z-index: -1;
+} */
+
+header .sn {
+  width: 20%;
+  display: flex;
+  border: 1px solid red;
+}
+
+header .sn li {
+  width: 33%;
+  text-align: right;
+}
+
+header .sn a {
+  color: #144aaa;
+  line-height: 4rem;
+}
+
+header .sn a:hover {
+  text-decoration: underline;
+}
+
+.swiper-slide {
+  display: flex;
+}
+
+.swiper-slide .text {
+  width: 40%;
+}
+
+.swiper-slide .text p {
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  color: #144aaa;
+  font-weight: bold;
+}
+
+.swiper-slide .text h2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #144aaa;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+}
+
+.swiper-slide .img {
+  position: relative;
+  width: 60%;
+  padding-top: 40%;
+}
+
+.swiper-slide .img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+}
+
+.swiper-pagination {
+  text-align: left;
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #144aaa;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0);
+}
+
+.swiper-pagination-bullet-active {
+  font-weight: bold;
+}
